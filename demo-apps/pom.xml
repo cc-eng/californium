@@ -21,6 +21,7 @@
 		<module>cf-benchmark</module>
 		<module>cf-benchmark-observe</module>
 		<module>cf-cocoa</module>
+		<module>cf-db5-server</module>
 		<module>cf-extplugtest-client</module>
 		<module>cf-extplugtest-server</module>
 		<module>cf-helloworld-client</module>

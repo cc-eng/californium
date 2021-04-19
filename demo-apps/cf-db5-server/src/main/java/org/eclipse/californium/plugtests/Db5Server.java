@@ -112,10 +112,10 @@ import picocli.CommandLine.ParseResult;
 //import org.eclipse.californium.core.network.CoAPEndpoint;
 
 /**
- * The class PlugtestServer implements the test specification for the ETSI IoT
+ * The class Db5Server implements the test specification for the ETSI IoT
  * CoAP Plugtests, London, UK, 7--9 Mar 2014.
  */
-public class PlugtestServer extends AbstractTestServer {
+public class Db5Server extends AbstractTestServer {
 
 	private static final File CONFIG_FILE = new File("CaliforniumPlugtest.properties");
 	private static final String CONFIG_HEADER = "Californium CoAP Properties file for Plugtest Server";
@@ -230,14 +230,14 @@ public class PlugtestServer extends AbstractTestServer {
 		}
 	}
 
-	@Command(name = "PlugtestServer", version = "(c) 2014, Institute for Pervasive Computing, ETH Zurich.")
+	@Command(name = "Db5Server", version = "(c) 2014, Institute for Pervasive Computing, ETH Zurich.")
 	public static class Config extends BaseConfig {
 
 	}
 
 	private static final Config config = new Config();
 
-	private static PlugtestServer server;
+	private static Db5Server server;
 	private static List<CoapServer> servers = new CopyOnWriteArrayList<>();
 	private static BaseConfig.Store storeConfig;
 	private static File store;
@@ -316,7 +316,7 @@ public class PlugtestServer extends AbstractTestServer {
 
 			List<InterfaceType> types = config.getInterfaceTypes();
 
-			server = new PlugtestServer(netconfig);
+			server = new Db5Server(netconfig);
 			server.setTag("PLUG-TEST");
 			add(server);
 			// ETSI Plugtest environment
@@ -331,7 +331,7 @@ public class PlugtestServer extends AbstractTestServer {
 			}
 		} catch (Exception e) {
 
-			System.err.printf("Failed to create " + PlugtestServer.class.getSimpleName() + ": %s\n", e.getMessage());
+			System.err.printf("Failed to create " + Db5Server.class.getSimpleName() + ": %s\n", e.getMessage());
 			e.printStackTrace(System.err);
 			System.err.println("Exiting");
 			System.exit(ERR_INIT_FAILED);
@@ -471,7 +471,7 @@ public class PlugtestServer extends AbstractTestServer {
 				}
 			}
 
-			LOGGER.info("{} started ...", PlugtestServer.class.getSimpleName());
+			LOGGER.info("{} started ...", Db5Server.class.getSimpleName());
 
 			if (inputReader != null) {
 				for (;;) {
@@ -479,7 +479,7 @@ public class PlugtestServer extends AbstractTestServer {
 						break;
 					}
 				}
-				LOGGER.info("{} stopping ...", PlugtestServer.class.getSimpleName());
+				LOGGER.info("{} stopping ...", Db5Server.class.getSimpleName());
 				shutdown();
 			}
 		}
@@ -640,7 +640,7 @@ public class PlugtestServer extends AbstractTestServer {
 		}
 	}
 
-	public PlugtestServer(NetworkConfig config) throws SocketException {
+	public Db5Server(NetworkConfig config) throws SocketException {
 		super(config, null);
 
 		// add resources to the server

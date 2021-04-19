@@ -47,7 +47,7 @@ import org.eclipse.californium.elements.tcp.netty.TlsServerConnector;
 import org.eclipse.californium.elements.util.NetworkInterfacesUtil;
 import org.eclipse.californium.elements.util.SslContextUtil;
 import org.eclipse.californium.elements.util.SslContextUtil.Credentials;
-import org.eclipse.californium.plugtests.PlugtestServer.BaseConfig;
+import org.eclipse.californium.plugtests.Db5Server.BaseConfig;
 import org.eclipse.californium.scandium.DTLSConnector;
 import org.eclipse.californium.scandium.MdcConnectionListener;
 import org.eclipse.californium.scandium.config.DtlsConnectorConfig;

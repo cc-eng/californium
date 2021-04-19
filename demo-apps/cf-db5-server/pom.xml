@@ -10,14 +10,14 @@
 		<artifactId>demo-apps</artifactId>
 		<version>3.0.0-SNAPSHOT</version>
 	</parent>
-	<artifactId>cf-plugtest-server</artifactId>
+	<artifactId>cf-db5-server</artifactId>
 	<packaging>jar</packaging>
 
-	<name>Cf-PlugtestServer</name>
-	<description>Californium (Cf) ETSI Plugtest server</description>
+	<name>Cf-Db5Server</name>
+	<description>Californium (Cf) ETSI db5 server</description>
 
 	<properties>
-		<assembly.mainClass>org.eclipse.californium.plugtests.PlugtestServer</assembly.mainClass>
+		<assembly.mainClass>org.eclipse.californium.plugtests.Db5Server</assembly.mainClass>
 		<skipNexusStagingDeployMojo>false</skipNexusStagingDeployMojo>
 		<skipStaging>false</skipStaging>
 		<maven.javadoc.skip>false</maven.javadoc.skip>
